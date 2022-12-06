@@ -2,7 +2,7 @@ package my_project.control;
 
 import KAGO_framework.control.ViewController;
 import KAGO_framework.model.abitur.datenstrukturen.Queue;
-import my_project.model.Ball;
+import my_project.model.*;
 import my_project.view.InputManager;
 
 import java.awt.event.MouseEvent;
@@ -14,7 +14,7 @@ import java.awt.event.MouseEvent;
 public class ProgramController {
 
     //Attribute
-
+    public double xPos;
 
     // Referenzen
     private ViewController viewController;  // diese Referenz soll auf ein Objekt der Klasse viewController zeigen. Über dieses Objekt wird das Fenster gesteuert.
@@ -36,9 +36,8 @@ public class ProgramController {
      */
     public void startProgram() {
         // Erstelle ein Objekt der Klasse Ball und lasse es zeichnen
-        Ball ball1 = new Ball(150,150);
-        viewController.draw(ball1);
-
+        House house = new House(0,0);
+        viewController.draw(house);
     }
 
     /**
@@ -46,6 +45,6 @@ public class ProgramController {
      * @param dt Zeit seit letzter Frame
      */
     public void updateProgram(double dt){
-
+        xPos = xPos + dt;
     }
 }
