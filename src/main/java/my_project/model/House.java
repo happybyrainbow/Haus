@@ -8,8 +8,8 @@ import java.awt.*;
 public class House extends InteractiveGraphicalObject {
 
     public House(int x, int y){
-        this.x = x;
-        this.y = y;
+        this.x = x - 200;
+        this.y = y - 300;
     }
 
     public void draw(DrawTool drawTool){

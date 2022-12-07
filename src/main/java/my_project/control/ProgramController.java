@@ -38,6 +38,10 @@ public class ProgramController {
         // Erstelle ein Objekt der Klasse Ball und lasse es zeichnen
         House house = new House(0,0);
         viewController.draw(house);
+        Tree tree = new Tree(100, 100);
+        viewController.draw(tree);
+        Fence fence = new Fence(300, 300);
+        viewController.draw(fence);
     }
 
     /**
